@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:formativa/products.dart';
+import 'package:formativa/productsList.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -146,16 +146,6 @@ class _CadasterProductsState extends State<CadasterProducts> {
                     onPressed: _post,
                     icon: Icon(Icons.app_registration),
                     label: Text("Cadastrar")),
-                ElevatedButton.icon(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Products(),
-                          ));
-                    },
-                    icon: Icon(Icons.shopping_cart),
-                    label: Text("Produtos"))
               ],
             ),
           )

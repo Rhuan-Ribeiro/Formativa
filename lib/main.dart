@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:formativa/cadasterProducts.dart';
+import 'package:formativa/products.dart';
 import 'package:formativa/cadasterUsers.dart';
 
 import 'package:http/http.dart' as http;
@@ -35,7 +35,7 @@ class _LoginState extends State<Login> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => CadasterProducts(),
+              builder: (context) => NavBottom(),
             ));
       }
     }
