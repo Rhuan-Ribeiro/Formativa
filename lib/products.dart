@@ -12,7 +12,7 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   String url = "http://10.109.83.13:3000/products";
   List data = [];
-  var products = <Produto>[];
+  var products = <Product>[];
 
   _get() async {
     http.Response response = await http.get(Uri.parse(url));
@@ -20,13 +20,16 @@ class _ProductsState extends State<Products> {
     data = json.decode(response.body);
 
     for (int i = 0; i < data.length; i++) {
-      print(data[i]);
+      print("i: ${data[i]}");
     }
+    print("products: $products");
+    print("data: $data");
     setState(() {
-      products = data.map((json) => Produto.fromJson(json)).toList();
+      print("test");
+      products = data.map((json) => Product.fromJson(json)).toList();
+      print("products: $products");
     });
-    print("products:");
-    print(products);
+    // print(products);
   }
 
   @override
@@ -38,33 +41,30 @@ class _ProductsState extends State<Products> {
         body: Column(
           children: [
             Column(
-              children: products
-                  .map((product) => Text(
-                        "${product.price}",
-                        style: TextStyle(fontSize: 18),
-                      ))
-                  .toList(),
-            ),
+                // exibe os dados no text
+                // map faz o mapeamento dos dados na lista
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: products
+                    .map((product) => Text(
+                          "${product.product}\nPreço: R\$ ${product.price}\nQuantidade: ${product.quantity}\n\n",
+                          style: TextStyle(fontSize: 18),
+                        ))
+                    .toList()),
             ElevatedButton(onPressed: _get, child: Icon(Icons.abc))
           ],
         ));
   }
 }
 
-class Produto {
+class Product {
   String id;
   String product;
   double price;
   int quantity;
-  Produto(this.id, this.product, this.price, this.quantity);
-  factory Produto.fromJson(Map<String, dynamic> json) {
-    return Produto(
+  Product(this.id, this.product, this.price, this.quantity);
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
         json["id"], json["product"], json["price"], json["quantity"]);
   }
-}
-
-// Classe produto_n para armazenar a lista total de products
-class Produto_n {
-  List prod = [];
-  Produto_n(this.prod);
 }
