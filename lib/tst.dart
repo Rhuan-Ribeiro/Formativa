@@ -1,22 +1,28 @@
-import 'package:flutter/material.dart'; // Pacote para o sistema operacional android
+import 'package:flutter/material.dart';
 import 'package:formativa/cadasterProducts.dart';
 import 'package:formativa/productsList.dart';
 
-// Classe do tipo stateful
+class NavBottom extends StatelessWidget {
+  const NavBottom({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: NavigatorScreen());
+  }
+}
+
 class NavigatorScreen extends StatefulWidget {
   const NavigatorScreen({super.key});
 
   @override
-  // Variavel state que monitora os widgets da classe
   State<NavigatorScreen> createState() => _NavigatorScreenState();
 }
 
 class _NavigatorScreenState extends State<NavigatorScreen> {
   int selectIndex = 0;
-  // TextStyle tipo de variavel para receber parametros de acordo com o tipo da fonte do texto
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  // Cria uma lista de widgets para utilizar no navigator bar
   static const List<Widget> _widgetOptions = <Widget>[
     Products(),
     CadasterProducts(),

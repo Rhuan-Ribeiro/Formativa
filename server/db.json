@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "user": "user1",
-      "pass": "pass"
-    },
-    {
       "id": "2",
       "user": "user2",
       "pass": "pass"
@@ -14,38 +9,48 @@
       "id": "3",
       "user": "user3",
       "pass": "pass"
+    },
+    {
+      "id": "8121",
+      "user": "user1",
+      "pass": "pass"
     }
   ],
   "products": [
     {
       "id": "1",
-      "product": "product1",
-      "price": 10.2,
-      "quantity": 2
+      "product": "Redmi Note 12S",
+      "price": 1299.99,
+      "quantity": 2,
+      "imageurl": "https://cdn.dooca.store/131031/products/celular-redmi-note-12s_450x600.png?v=1702663662&webp=0"
     },
     {
       "id": "2",
-      "product": "product2",
-      "price": 15.5,
-      "quantity": 5
+      "product": "Pc Potente",
+      "price": 4549.90,
+      "quantity": 5,
+      "imageurl": "https://shopinfo.vteximg.com.br/arquivos/ids/1513336/1.png?v=638318642553900000"
     },
     {
       "id": "3",
-      "product": "product3",
-      "price": 20.5,
-      "quantity": 3
+      "product": "PS5",
+      "price": 3679.90,
+      "quantity": 3,
+      "imageurl": "https://vivo.com.br/content/dam/vivo-sites/vivo-com-br/homepage/imagens/acessorios/sony-playstation-5-406x406.png"
     },
     {
       "id": "4",
-      "product": "product4",
-      "price": 8.3,
-      "quantity": 10
+      "product": "Raspberry Pi 5",
+      "price": 1000.10,
+      "quantity": 10,
+      "imageurl": "https://d229kd5ey79jzj.cloudfront.net/2905/images/2905_2_O.png?2023-09-27%2017:47:53"
     },
     {
       "id": "5",
-      "product": "product5",
-      "price": 5.2,
-      "quantity": 1
+      "product": "Motor a Diesel",
+      "price": 2870.54,
+      "quantity": 1,
+      "imageurl": "https://img.lojadomecanico.com.br/IMAGENS/33/787/96606/1572264590258.JPG"
     }
   ]
 }

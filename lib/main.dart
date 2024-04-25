@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:formativa/products.dart';
 import 'package:formativa/cadasterUsers.dart';
+import 'package:formativa/productTest.dart';
 
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:google_fonts/google_fonts.dart';
 
 TextEditingController _user = TextEditingController();
 TextEditingController _pass = TextEditingController();
 
 void main() {
   runApp(MaterialApp(
+    theme: ThemeData(
+      textTheme: GoogleFonts.poppinsTextTheme(),
+    ),
     home: Login(),
   ));
 }
@@ -35,7 +40,7 @@ class _LoginState extends State<Login> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => NavBottom(),
+              builder: (context) => NavigatorScreen(),
             ));
       }
     }
@@ -142,8 +147,8 @@ class _LoginState extends State<Login> {
                             builder: (context) => CadasterUsers(),
                           ));
                     },
-                    icon: Icon(Icons.app_registration),
-                    label: Text("Cadastrar"))
+                    icon: Icon(Icons.engineering),
+                    label: Text("Usuários")),
               ],
             ),
           )
